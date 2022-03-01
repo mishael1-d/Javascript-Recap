@@ -1,9 +1,22 @@
 // Get the values for the start and end numbers
-let start = document.getElementById('start').value
-let end = document.getElementById('end').value
-let check = document.getElementById('check')
+// var start = document.getElementById("start").value;
+// var end = document.getElementById("end").value;
+// var check = document.getElementById("check");
 
-check.addEventListener('click', function submit (){
-    console.log(start);
-    console.log(end);
-})
+let start = 02;
+let end = 24;
+let numbers = [];
+for (i = start; i <= end; i++) {
+  numbers.push(i);
+}
+if (start >= end) {
+  console.log("Start can not be greater");
+} else {
+  numbers.map((number, index) => {
+    if (number % 2 === 0) {
+      console.log("even");
+    } else {
+      console.log("odd");
+    }
+  });
+}
